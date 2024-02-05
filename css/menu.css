@@ -1,0 +1,110 @@
+.menu {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 2%;
+    margin-inline-end: 2%;
+    font-size: 1vw;
+}
+
+.span-menu {
+    color: #1a237e;
+    display: flex;
+    justify-content: center;
+    padding: 10px 15px;
+    position: relative;
+    overflow: hidden;
+    border-radius: 10px; /* Adiciona bordas arredondadas */
+    background-color: #808080; /* Define a cor de fundo inicial */
+    transition: 0.3s; /* Adiciona uma transição para suavizar a mudança de cor */
+}
+
+.span-menu:hover {
+    background-color: #90a6da; /* Muda a cor de fundo ao passar o mouse */
+}
+
+.span-menu:before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    background-color: inherit; /* Mantém a mesma cor do fundo do .span-menu */
+    z-index: -1;
+    transform: translateX(-100%);
+}
+
+.span-menu:hover:before {
+    transform: translateX(0);
+}
+
+/* Removemos a animação original */
+/* .span-menu:hover:before {
+    transform: translateX(0);
+} */
+
+.menu-li {
+    display: flex;
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+}
+
+li {
+    display: inline-block;
+    position: relative;
+    color: #fff;
+    cursor: pointer;
+    margin: 0 10px;
+}
+
+.submenu {
+    display: none;
+    position: absolute;
+    padding: auto;
+    background-color: #90a6da;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 10px; /* Adiciona bordas arredondadas ao sub-menu */
+}
+
+li:hover .submenu {
+    display: block;
+    background-color: #90a6da;
+}
+
+.submenu li {
+    display: block;
+    border-bottom: 1px solid #808080;
+    transition: 0.3s;
+}
+
+
+li:hover .submenu {
+    display: block;
+    background-color: #90a6da; /* Altera a cor do submenu quando o li é hover */
+}
+
+.submenu li {
+    display: block;
+    border-bottom: 1px solid #808080; /* Adiciona uma linha divisória entre os itens do submenu */
+}
+
+a {
+    color: #fff;
+    text-decoration: none;
+    padding: 10px;
+    display: block;
+}
+
+@media (max-width: 844px) {
+    .menu {
+        order: 0; /* Move o menu para o início na versão mobile */
+    }
+
+    .logo {
+        order: -1; /* Mantém a logo no segundo lugar na versão mobile */
+    }
+}

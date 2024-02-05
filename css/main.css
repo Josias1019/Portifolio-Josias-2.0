@@ -1,0 +1,42 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    background-color: #e3e8f5;
+    flex-direction: column;
+    font-family: 'Pacifico', 'Helvetica', 'Arial', sans-serif;
+
+}
+
+header {
+    display: flex;
+    margin: 2%;
+    justify-content: center;
+}
+
+.logo-center {
+    text-align: center;
+}
+
+.imagem-responsiva {
+    max-width: 100%;
+    height: auto;
+    display: flex;
+    justify-content: center;
+}
+
+.section-cursos {
+    font-family: 'Pacifico', 'Helvetica', 'Arial', sans-serif;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+.slider {
+    margin-top: 2%;
+}
