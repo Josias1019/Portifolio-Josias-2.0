@@ -70,6 +70,10 @@ li {
     border-radius: 10px; /* Adiciona bordas arredondadas ao sub-menu */
 }
 
+.submenu.show {
+    display: block;
+}
+
 li:hover .submenu {
     display: block;
     background-color: #90a6da;
