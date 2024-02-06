@@ -73,6 +73,7 @@ li {
     background-color: #90a6da;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     border-radius: 10px; /* Adiciona bordas arredondadas ao sub-menu */
+    z-index: 2;
 }
 
 .submenu.show {
