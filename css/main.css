@@ -18,6 +18,13 @@ header {
     justify-content: center;
 }
 
+#welcome-message {
+    background-color: #f0f0f0;
+    color: #333;
+    padding: 10px;
+    text-align: center;
+}
+
 .logo-center {
     text-align: center;
 }
@@ -39,4 +46,5 @@ html {
 
 .slider {
     margin-top: 2%;
+    z-index: 1; /* Defina um valor menor para z-index para que o slider fique abaixo do menu */
 }
