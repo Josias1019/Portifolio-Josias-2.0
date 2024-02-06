@@ -46,5 +46,5 @@ html {
 
 .slider {
     margin-top: 2%;
-    z-index: 1; /* Defina um valor menor para z-index para que o slider fique abaixo do menu */
+    z-index: -1; /* Defina um valor menor para z-index para que o slider fique abaixo do menu */
 }
