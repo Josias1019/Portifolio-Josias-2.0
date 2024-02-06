@@ -48,6 +48,11 @@
     display: flex;
 }
 
+.menu-li:focus .submenu,
+.menu-li:hover .submenu {
+  display: block;
+}
+
 ul {
     list-style: none;
     padding: 0;
