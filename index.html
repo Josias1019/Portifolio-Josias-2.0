@@ -2,19 +2,20 @@
 <html lang="en">
 
 <head>
-    <meta charset='utf-8'>
-    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <title>Portifolio</title>
-    <meta name='viewport' content='width=device-width, initial-scale=1'>
-    <link rel='stylesheet' type='text/css' media='screen' href='css/main.css'>
-    <link rel='stylesheet' type='text/css' media='screen' href='css/menu.css'>
-    <link rel="icon" href="favicon.ico" type="image/x-icon">
-    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
-    <!-- Adicione o jQuery antes do Slick Carousel -->
-    <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
-    <!-- Mova o jQuery para cá -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" media="screen" href="css/main.css">
+    <link rel="stylesheet" type="text/css" media="screen" href="css/menu.css">
     <link rel="stylesheet" type="text/css" href="slick-master/slick/slick.css" />
     <link rel="stylesheet" type="text/css" href="slick-master/slick/slick-theme.css" />
+    <!-- Adicione o jQuery antes do Slick Carousel -->
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+
+    <!-- Mova o jQuery para cá -->
+
+
     <script type="text/javascript" src="slick-master/slick/slick.min.js"></script>
     <script type="text/javascript" src="Script/main.js"></script>
 </head>
@@ -26,7 +27,7 @@
         <div class="logo-center">
             <!-- Logo com dimensões ajustadas -->
             <img src="image/JF-logo.jpg" alt="Minha Imagem" class="imagem-responsiva">
-        </div><br>
+        </div>
 
     </header>
 
@@ -90,54 +91,107 @@
         <div class="slider">
 
             <!-- Imagens do Slider -->
-            <img src='image/code1.png' alt='Imagem do Slider'>
-            <img src='image/code2.png' alt='Imagem do Slider'>
-            <img src='image/code3.png' alt='Imagem do Slider'>
+            <img src="image/code1.png" alt="Imagem do Slider" style="width: 100%; height: auto;">
+            <img src="image/code2.png" alt="Imagem do Slider" style="width: 100%; height: auto;">
+            <img src="image/code3.png" alt="Imagem do Slider" style="width: 100%; height: auto;">
 
-        </div>
-
-        <div class="conteudo">
-            <h1>Bem-vindo, Visitante!</h1>
-            <p>Este é um exemplo de conteúdo dentro de uma div usando HTML e CSS.</p>
         </div>
 
         <div class="section-cursos">
             <div class="section cursos">
                 <h1>Bem-vindo, Visitante!</h1>
                 <p>Este é um exemplo de conteúdo dentro de uma div usando HTML e CSS.</p>
+                <img src="image/paisagem2.jpeg" alt="Imagem do Slider" style="width: 50%; height: 35%;">
             </div>
+
+            <button class="btnTopo">Topo</button>
+
         </div>
 
         <div class="section-cursos">
             <div class="section cursos2">
                 <h1>Bem-vindo, Visitante!</h1>
                 <p>Este é um exemplo de conteúdo dentro de uma div usando HTML e CSS.</p>
+                <img src="image/paisagem2.jpeg" alt="Imagem do Slider" style="width: 50%; height: 35%;">
             </div>
+
+            <button class="btnTopo">Topo</button>
+
         </div>
 
         <div class="section-cursos">
             <div class="section cursos3">
                 <h1>Bem-vindo, Visitante!</h1>
                 <p>Este é um exemplo de conteúdo dentro de uma div usando HTML e CSS.</p>
+                <img src="image/paisagem3.jpeg" alt="Imagem do Slider" style="width: 50%; height: 35%;">
             </div>
+
+            <button class="btnTopo">Topo</button>
+
         </div>
 
     </main>
 
+    <footer>
+
+        <p>&copy; Seu Site - <span id="dataAtualizada"></span></p>
+
+        <script>
+            // Função para obter a data atual
+            function getDataAtualizada() {
+                const data = new Date();
+                const mes = data.toLocaleString('default', { month: 'long' });
+                const ano = data.getFullYear();
+                return `${mes} ${ano}`;
+            }
+
+            // Atualizar o conteúdo da span com o id "dataAtualizada"
+            document.getElementById('dataAtualizada').textContent = getDataAtualizada();
+        </script>
+
+    </footer>
+
+    <script>
+        window.onload = function () {
+            alert("Bem-vindo ao meu Portifolio, algumas coisas são interativas.");
+        };
+    </script>
+
     <script>
         document.querySelectorAll('a[href^=".cursos"]').forEach(anchor => {
-            anchor.addEventListener('click', function (e) {
+            anchor.addEventListener("click", function (e) {
                 e.preventDefault();
-                document.querySelector(this.getAttribute('href')).scrollIntoView({
-                    behavior: 'smooth'
+                document.querySelector(this.getAttribute("href")).scrollIntoView({
+                    behavior: "smooth"
                 });
             });
         });
+
+        document.addEventListener("DOMContentLoaded", function () {
+            // Função para rolar suavemente para o topo
+            function scrollToTop() {
+                window.scrollTo({
+                    top: 0,
+                    behavior: "smooth" // Rola suavemente
+                });
+            }
+
+            // Seleciona todos os botões com a classe "btnTopo"
+            var btnTopoElements = document.querySelectorAll(".btnTopo");
+
+            // Adiciona um listener de evento de clique a todos os botões "topo"
+            btnTopoElements.forEach(function (btnTopo) {
+                btnTopo.addEventListener("click", function () {
+                    scrollToTop(); // Chama a função de rolagem suavemente
+                });
+            });
+        });
+
     </script>
 
     <script>
         $(document).ready(function () {
-            $('.slider').slick({
+            $(".slider").slick({
                 autoplay: true,
                 dots: true,
                 arrows: false,
