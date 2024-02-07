@@ -13,7 +13,153 @@ body {
 }
 
 header {
+    display: flex;* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  display: flex;
+  background-color: #e3e8f5;
+  flex-direction: column;
+  font-family: 'Open Sans', sans-serif;
+}
+
+header {
+  display: flex;
+  margin: 2%;
+  justify-content: center;
+}
+
+#welcome-message {
+  background-color: #f0f0f0;
+  color: #333;
+  padding: 10px;
+  text-align: center;
+}
+
+.logo-center {
+  text-align: center;
+}
+
+.imagem-responsiva {
+  max-width: 100%;
+  height: auto;
+  display: flex;
+  justify-content: center;
+}
+
+.section-cursos {
+  display: flex;
+  width: 100%;
+
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+.slider {
+  margin-top: 2%;
+  z-index: 1; /* Defina um valor menor para z-index para que o slider fique abaixo do menu */
+}
+
+/* Ajuste dos conteúdo */
+.content-hidden {
+  opacity: 0;
+  transition: opacity 0.5s ease;
+}
+
+.content-visible {
+  opacity: 1;
+}
+
+.section {
+  margin-bottom: 5px; /* Ajuste o valor da margem inferior conforme necessário */
+}
+
+/* Ajustar texto do conteúdo */
+.text-content1 {
+  display: flex;
+  justify-content: left;
+  flex-direction: column;
+  text-align: center;
+  font-size: 18px;
+  width: auto;
+  height: auto;
+  margin-bottom: 100px;
+}
+
+.text-content2 {
     display: flex;
+    justify-content: left;
+    flex-direction: column;
+    text-align: center;
+    font-size: 125%;
+    width: 600px;
+    height: auto;
+}
+
+.text-content3 {
+    display: flex;
+    justify-content: left;
+    flex-direction: column;
+    text-align: center;
+    font-size: 125%;
+    width: 600px;
+    height: auto;
+}
+
+@media screen and (min-width: 600px) {
+    .section.cursos2.content-hidden {
+        flex-direction: row;
+    }
+
+    .text-content1, .image-content1 {
+        width: 50%;
+    }
+}
+
+/* IMAGENS DO CONTEÚDO, modificar e ajustar imagens */
+
+.section-cursos {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+/* AJUSTAR BOTÃO */
+.btnTopo {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  text-align: center;
+  align-items: center;
+  background-color: #808080;
+  height: 30px;
+  width: 50px;
+  border-radius: 20px;
+  cursor: pointer;
+}
+
+/* Ajustar imagens */
+.image-content1 {
+  display: flex;
+  justify-content: right;
+}
+
+.image-content2 {
+  display: flex;
+  justify-content: left;
+}
+
+.image-content3 {
+  display: flex;
+  justify-content: right;
+}
+
     margin: 2%;
     justify-content: center;
 }
